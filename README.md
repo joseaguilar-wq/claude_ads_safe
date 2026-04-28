@@ -6,12 +6,6 @@
 
 Comprehensive paid advertising audit and optimization skill for Claude Code. Covers Google Ads, Meta Ads, YouTube Ads, LinkedIn Ads, TikTok Ads, Microsoft Ads, and Apple Ads with **250+ audit checks**, industry-specific templates, parallel subagent delegation, PPC financial modeling, A/B test design, and PDF report generation.
 
-[![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/claude-code)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/AgriciDaniel/claude-ads)](https://github.com/AgriciDaniel/claude-ads/releases)
-[![CI](https://img.shields.io/github/actions/workflow/status/AgriciDaniel/claude-ads/ci.yml?branch=main&label=CI)](https://github.com/AgriciDaniel/claude-ads/actions)
-
-> **Blog:** [Read the full ad audit breakdown](https://agricidaniel.com/blog/claude-code-ad-agency)
 
 ## Contents
 
@@ -332,7 +326,7 @@ Yes. Claude Ads is an audit and strategy tool. It finds issues, recommends fixes
 **Why do some recommendations seem off for my account size?**
 Benchmarks and best practices differ significantly between a $500/month account and a $50k/month account. Always tell Claude your budget upfront: *"I spend $2k/month on Google Ads for a local plumbing business"* gives much better results than running `/ads google` without context.
 
-**Does it support [platform] ads?**
+**Does it support platform ads?**
 Currently supported: Google, Meta (Facebook/Instagram), YouTube, LinkedIn, TikTok, Microsoft/Bing, and Apple Ads. Additional platforms (Reddit, CTV/OTT, Pinterest, Snapchat) are covered in the reference guide for strategic planning.
 
 ## Requirements
@@ -355,25 +349,6 @@ curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/uninst
 irm https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/uninstall.ps1 | iex
 ```
 
-## Related Projects
 
-- [Claude SEO](https://github.com/AgriciDaniel/claude-seo); Comprehensive SEO analysis skill for Claude Code
 
-## License
 
-MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-Built for Claude Code by [@AgriciDaniel](https://github.com/AgriciDaniel)
-
----
-
-## Author
-
-Built by [Agrici Daniel](https://agricidaniel.com/about) - AI Workflow Architect.
-
-- [Blog](https://agricidaniel.com/blog) - Deep dives on AI marketing automation
-- [AI Marketing Hub](https://www.skool.com/ai-marketing-hub) - Free community, 2,800+ members
-- [YouTube](https://www.youtube.com/@AgriciDaniel) - Tutorials and demos
-- [All open-source tools](https://github.com/AgriciDaniel)
