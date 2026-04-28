@@ -41,7 +41,30 @@ Add the marketplace and install in Claude Code:
 
 This registers claude-ads as a native plugin with auto-updates, namespace isolation, and proper version tracking.
 
+### Recommended Install (Unix/macOS/Linux)
+
+Clone the repo first so you can review the installer before running it:
+
+```bash
+git clone https://github.com/AgriciDaniel/claude-ads.git
+cd claude-ads
+cat install.sh        # review before executing
+./install.sh
+```
+
+### Recommended Install (Windows PowerShell)
+
+```powershell
+git clone https://github.com/AgriciDaniel/claude-ads.git
+cd claude-ads
+# Review install.ps1 before executing
+.\install.ps1
+```
+
 ### One-Command Install (Unix/macOS/Linux)
+
+> ⚠️ **Security notice:** The `curl | bash` pattern executes remote code without prior review.
+> Only use this if you trust the source and have reviewed the script at the URL above.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/install.sh | bash
@@ -49,20 +72,11 @@ curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/instal
 
 ### One-Command Install (Windows PowerShell)
 
+> ⚠️ **Security notice:** The `irm | iex` pattern executes remote code without prior review.
+> Only use this if you trust the source and have reviewed the script at the URL above.
+
 ```powershell
 irm https://raw.githubusercontent.com/AgriciDaniel/claude-ads/main/install.ps1 | iex
-```
-
-### Manual Install
-
-```bash
-git clone https://github.com/AgriciDaniel/claude-ads.git
-cd claude-ads
-./install.sh          # Unix/macOS/Linux
-```
-
-```powershell
-.\install.ps1         # Windows PowerShell
 ```
 
 <p align="center">

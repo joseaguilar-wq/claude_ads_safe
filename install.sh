@@ -69,11 +69,14 @@ main() {
     if command -v pip3 >/dev/null 2>&1 || command -v pip >/dev/null 2>&1; then
         PIP_CMD="pip3"
         command -v pip3 >/dev/null 2>&1 || PIP_CMD="pip"
-        ${PIP_CMD} install -q -r "${SKILL_DIR}/requirements.txt" 2>/dev/null \
-            || { echo "  ⚠ Standard pip install failed, trying --break-system-packages..." >&2; \
-                 ${PIP_CMD} install --break-system-packages -q -r "${SKILL_DIR}/requirements.txt" 2>/dev/null; } \
-            && echo "  ✓ Python dependencies installed" \
-            || echo "  ⚠ pip install failed. Run manually: pip3 install -r ${SKILL_DIR}/requirements.txt"
+        if ${PIP_CMD} install -q -r "${SKILL_DIR}/requirements.txt" 2>/dev/null; then
+            echo "  ✓ Python dependencies installed"
+        else
+            echo "  ⚠ pip install failed. To install dependencies manually, run one of:"
+            echo "     Option 1 (recommended — isolated):  python3 -m venv ~/.claude/skills/ads/.venv && ~/.claude/skills/ads/.venv/bin/pip install -r ${SKILL_DIR}/requirements.txt"
+            echo "     Option 2 (system-wide):              pip3 install -r ${SKILL_DIR}/requirements.txt"
+            echo "  Note: --break-system-packages is intentionally NOT used to protect your OS Python environment."
+        fi
     else
         echo "  ⚠ pip not found. Install deps manually: pip3 install -r ${SKILL_DIR}/requirements.txt"
     fi
